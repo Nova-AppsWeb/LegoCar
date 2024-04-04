@@ -28,6 +28,9 @@
 		"style-loader": "^3.3.3",
 		"webpack-stream": "^7.0.0"
 	},
+	"scripts" : {
+		"build": "gulp build"
+	},
 	"babel": {
 		"presets": [
 			"@babel/preset-env"
