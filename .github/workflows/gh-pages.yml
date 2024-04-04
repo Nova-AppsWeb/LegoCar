@@ -1,30 +1,29 @@
-name: Deploy to GitHub-Pages
-
-on:
-  push:
-    branches:
-      - master
-
+name: Build and Deploy
+on: [push] # defaults to master
+permissions:
+  contents: write
 jobs:
-  deploy:
-    name: Deploy
+  build-and-deploy:
     runs-on: ubuntu-latest
-
-      - name: Checkout
+    steps:
+      - name: Checkout 
         uses: actions/checkout@v3
-        with:
-          persist-credentials: false
 
-      - name: Install dependencies
-        run: npm ci
-
-
-      - name: Build project
-        run: npm run build
+      - name: Install and Build
+        run: |
+          npm install
+          npm run-script build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: ./build
-          branch: gh-pages
-          single-commit: true
+          folder: build
+          
+    - name: Install and Build 🔧
+      run: |
+        npm install
+        npm run-script build
+
+        with:
+        branch: gh-pages
+        folder: dist
