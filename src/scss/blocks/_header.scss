@@ -1,5 +1,10 @@
 .container {
-	padding: 0 44px;
+	@media (max-width: 1024px) {
+		padding: 0 86px;
+	}
+	@media (max-width: 768px) {
+		padding: 0 44px;
+	}
 	@media (max-width: 375px) {
 		padding: 0 20px;
 	}
@@ -131,6 +136,10 @@
 		line-height: 14.5px;
 		letter-spacing: 0px;
 		text-align: left;
+		transition: 0.5s;
+		&:hover {
+			opacity: 0.8;
+		}
 	}
 	&__icon {
 		width: 16px;

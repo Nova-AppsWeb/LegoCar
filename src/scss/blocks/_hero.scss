@@ -1,0 +1,141 @@
+.hero {
+    &__h1 {
+        color: rgb(62, 62, 62);
+        font-family: var(--font-main);
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+        letter-spacing: 0px;
+        text-align: left;
+        @media (max-width: 1024px) {
+            max-width: 603px;
+		}
+        @media (max-width: 740px) {
+            max-width: 335px;
+            font-size: 16px;
+            line-height: 19px;
+		}
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        gap: 32px;
+    }
+
+    &__info {
+        width: 338px;
+        color: rgb(255, 255, 255);
+        font-family: var(--font-main);
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: flex-start;
+        @media (max-width: 740px) {
+            max-width: 284px;
+            justify-content: space-between;
+         }
+    }
+    &__info-mob {
+        @media (max-width: 740px) {
+            gap: 15px;
+         }
+    }
+    &__title {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        @media (max-width: 740px) {
+            gap: 8px;
+         }
+    }
+    &__h2  {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        @media (max-width: 740px) {
+            font-size: 16px;
+         }
+    }
+    &__subtitle {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    &__btn {
+        padding: 16px 28px;
+        width: 142px;
+        height: 45px;
+        @media (max-width: 1024px) {
+            padding: 14px 31px;
+		}
+    }
+    &__btn-two {
+        padding: 16px 28px;
+        width: 180px;
+        @media (max-width: 1024px) {
+            padding: 14px 12px;
+		}
+    }
+    &__btn-three {
+        padding: 16px 33px;
+        width: 180px;
+        @media (max-width: 1024px) {
+            padding: 14px 17px;
+		}
+    }
+    &__btn-four {
+        width: 119px;
+        @media (max-width: 1024px) {
+            padding: 14px 12px;
+		}
+    }
+    &__btn-active {
+        @media (max-width: 1024px) {
+            display: none;
+		}
+    }
+    &__btn-active-two {
+        display: none;
+        @media (max-width: 1024px) {
+            display: block;
+		}
+    }
+}
+
+.btn {
+    font-weight: 600;
+    line-height: 17px;
+    font-size: 14px;
+    font-family: var(--font-main);
+    box-sizing: border-box;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        background: rgba(255, 255, 255, 0.15);
+    }
+    @media (max-width: 1024px) {
+        width: 148px;
+        height: 45px;
+    }
+    @media (max-width: 740px) {
+        padding: 12px 0;
+        height: 41px;
+     }
+
+}
+
+.container-hero {
+    padding: 56px 86px;
+    display: flex;
+    justify-content: center;
+	@media (max-width: 768px) {
+		padding: 56px 44px;
+	}
+	@media (max-width: 375px) {
+		padding: 56px 20px;
+	}
+}
